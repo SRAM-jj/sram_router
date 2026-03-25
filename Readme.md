@@ -1,4 +1,4 @@
-cat << 'EOF' > README.md
+
 # 🛡️ Edge-AI 기반 로봇 팔 텔레메트리 보안 파이프라인 (CPS)
 
 ## 📌 프로젝트 제1원칙 (First Principles)
@@ -61,8 +61,9 @@ source install/setup.bash
 ros2 run llm_pkg llm_analyzer_node
 # //여기까진 4단계 필터링 데이터를 대기하는 LLM 분석 노드 실행에 대한 내용
 
+
 ### 2. Gateway 라우터 가동 (Raspberry Pi)
-Bash
+```bash
 export ROS_DOMAIN_ID=30
 cd ~/sec_filter_ws
 source install/setup.bash

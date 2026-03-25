@@ -60,7 +60,7 @@ source install/setup.bash
 
 ros2 run llm_pkg llm_analyzer_node
 # //여기까진 4단계 필터링 데이터를 대기하는 LLM 분석 노드 실행에 대한 내용
-
+```
 
 ### 2. Gateway 라우터 가동 (Raspberry Pi)
 ```bash
@@ -71,6 +71,9 @@ source install/setup.bash
 
 ros2 run sec_filter_pkg filter_node
 # //여기까진 UDP 8888 포트를 개방하고 투트랙 라우팅 게이트웨이를 활성화하는 것에 대한 내용
+```
 ### 3. Edge Node 전원 인가 (ESP32)
+```
 Gateway 정상 가동(Listening) 확인 후, ESP32에 전원을 인가하여 암호화된 센서 데이터 송출 시작.
 EOF
+```

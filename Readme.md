@@ -36,6 +36,7 @@
 
 ---
 
+
 ## 🏗️ 시스템 아키텍처
 
 1. **데이터 수집:** 다이나믹셀 모터에서 발생하는 실제 물리 데이터(Torque, Temperature)를 ESP32가 수집.
@@ -45,6 +46,17 @@
    * `ERROR/DANGER`: 즉각적인 ROS 2 토픽으로 바이패스 전송 (`/alert_error`, `/alert_danger`)
 4. **AI 침입 탐지:** Google Coral TPU가 네트워크 패킷을 감시하여 Deauth 등 비정상 공격 방어.
 
+---
+## 📁 폴더 구조 (Directory Structure)
+
+```text
+SRAM_ROUTER/
+├── sram_exp32tsetdata/
+│   └── RobotARMTestData.ino   # 로봇 팔 관절 모터 제어 및 원시(Raw) 데이터 수집용 테스트 코드
+├── esp32_senddata/            # ESP32에서 수집된 데이터를 UDP 패킷으로 변환하여 송출하는 에지 노드 코드
+├── sram_rasberrydata/         # 라즈베리파이 도커 환경 및 ROS 2 L7 상태 분류 게이트웨이 소스 코드
+└── Readme.md                  # 프로젝트 통합 설명서
+```
 ---
 
 ## 🚀 시작하기 (Runbook)

@@ -58,6 +58,29 @@ SRAM_ROUTER/
 └── Readme.md                  # 프로젝트 통합 설명서
 ```
 ---
+##  절대기준 JSON (JSON)
+```bash
+JSON
+{
+  "device_id": "ARM_NODE_01",
+  "timestamp": 123456789,
+  "status": {
+    "state": "ERROR",
+    "error_code": 4021,
+    "emergency_stop": true
+  },
+  "joints": {
+    "names": ["base", "shoulder", "elbow", "wrist", "gripper"],
+    "positions": [1.57, -0.52, 1.20, 0.0, 0.5],
+    "efforts": [12.5, 210.5, 30.1, 5.0, 1.2],
+    "temperatures": [35.2, 88.3, 38.0, 32.1, 30.0]
+  },
+  "end_effector": {
+    "pose": {"x": 250.5, "y": 100.2, "z": 300.0, "roll": 0.0, "pitch": 1.57, "yaw": 0.0},
+    "gripper_active": true
+  }
+}
+```
 
 ## 🚀 시작하기 (Runbook)
 
